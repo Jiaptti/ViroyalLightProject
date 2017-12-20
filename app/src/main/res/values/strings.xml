@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">LightProject</string>
+    <string name="app_name">"123木头人"</string>
+    <string name="no_net">"没有网络"</string>
+    <string name="confirm">"确定"</string>
+    <string name="cancel">"取消"</string>
+    <string name="net_error">"网络错误，请检查网络是否稳定"</string>
 </resources>
