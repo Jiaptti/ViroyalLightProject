@@ -1,13 +1,12 @@
 package com.lightproject.entity;
 
-import java.util.Date;
 
 /**
  * Created by hanjiaqi on 2017/12/20.
  */
 
 public class SysUser {
-    private Long id;
+    private int id;
     /**
      * 用户昵称
      */
@@ -33,29 +32,26 @@ public class SysUser {
     /**
      * 创建时间
      */
-    private Date createTime;
+    private String createTime;
     /**
      * 最后登录时间
      */
-    private Date lastLoginTime;
+    private String lastLoginTime;
     /**
      * 1:有效，0:禁止登录
      */
-    private String status;
-    private String createNameId;
-    private Date lastUpdateTime;
-    private String lastUpdateNameId;
+    private Object status;
 
     /**
      * 角色ID
      */
     private Long roleId;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -99,52 +95,12 @@ public class SysUser {
         this.pswd = pswd;
     }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getLastLoginTime() {
-        return lastLoginTime;
-    }
-
-    public void setLastLoginTime(Date lastLoginTime) {
-        this.lastLoginTime = lastLoginTime;
-    }
-
-    public String getStatus() {
+    public Object getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Object status) {
         this.status = status;
-    }
-
-    public String getCreateNameId() {
-        return createNameId;
-    }
-
-    public void setCreateNameId(String createNameId) {
-        this.createNameId = createNameId;
-    }
-
-    public Date getLastUpdateTime() {
-        return lastUpdateTime;
-    }
-
-    public void setLastUpdateTime(Date lastUpdateTime) {
-        this.lastUpdateTime = lastUpdateTime;
-    }
-
-    public String getLastUpdateNameId() {
-        return lastUpdateNameId;
-    }
-
-    public void setLastUpdateNameId(String lastUpdateNameId) {
-        this.lastUpdateNameId = lastUpdateNameId;
     }
 
     public Long getRoleId() {

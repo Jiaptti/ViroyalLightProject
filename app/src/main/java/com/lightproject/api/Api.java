@@ -3,6 +3,7 @@ package com.lightproject.api;
 
 import com.google.gson.Gson;
 import com.lightproject.AppConstant;
+import com.lightproject.api.convert.MyGsonConverterFactory;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -37,12 +38,13 @@ public class Api{
 
         Cache cache = new Cache(new File(AppConstant.NET_DATA_PATH), 1024 * 1024 * 10);
         OkHttpClient client = new OkHttpClient.Builder()
-                .addInterceptor( new ClientHelper().getAutoCacheInterceptor())
+                .addInterceptor( new ClientHelper().appIntercepter())
                 .addNetworkInterceptor(new ClientHelper().getAutoCacheInterceptor())
                 .cache(cache)
                 .connectTimeout(TIMEOUT_CONNECTION, TimeUnit.SECONDS)
                 .readTimeout(TIMEOUT_READ, TimeUnit.SECONDS)
                 .build();
+
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
